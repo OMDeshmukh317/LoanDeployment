@@ -1,29 +1,21 @@
-# Use a Python base image
-FROM python:3.11-slim
+# Use Rust base image for Rust tooling
+FROM rust:1.70-slim as builder
 
-# Install Rust toolchain (required by maturin)
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# Install Python and pip
+RUN apt-get update && apt-get install -y python3 python3-pip
 
-# Install build dependencies
-RUN apt-get update && apt-get install -y \
-  build-essential \
-  libssl-dev \
-  libffi-dev \
-  python-dev \
-  git
-
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# Copy the project files
+# Copy project files to the container
 COPY . /app
 
-# Create a virtual environment
-RUN python -m venv .venv
-RUN .venv/bin/pip install --upgrade pip
-
 # Install Python dependencies
-RUN .venv/bin/pip install -r requirements.txt
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install -r requirements.txt
 
-# Set the entry point for the application
-CMD [".venv/bin/python", "manage.py", "runserver"]
+# Set writable CARGO_HOME
+ENV CARGO_HOME=/app/.cargo
+
+# Run the application
+CMD ["python3", "manage.py", "runserver"]
