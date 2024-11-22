@@ -1,4 +1,6 @@
 # Use a Python base image with Rust pre-installed
+ENV CARGO_HOME=/app/.cargo
+
 FROM rust:1.70-slim AS builder
 
 # Install Python and pip
