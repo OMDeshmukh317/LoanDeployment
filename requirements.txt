@@ -1,4 +1,4 @@
-﻿absl-py==2.1.0
+absl-py==2.1.0
 anyio==4.4.0
 argon2-cffi==23.1.0
 argon2-cffi-bindings==21.2.0
@@ -94,12 +94,18 @@ protobuf==4.25.3
 psutil==6.0.0
 psycopg2==2.9.10
 pure-eval==0.2.2
+pyarrow==13.0.0
 pycparser==2.22
 pygame==2.5.2
 Pygments==2.18.0
 pylance==0.8.8
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.2
+PyQt5_sip==12.15.0
 python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
+PythonTurtle==0.3.2
+pywin32==306
 pywinpty==2.0.13
 PyYAML==6.0.1
 pyzmq==26.0.3
@@ -146,4 +152,3 @@ whitenoise==6.8.2
 widgetsnbextension==4.0.11
 wrapt==1.16.0
 xgboost==2.1.2
-turtle==0.0.1
