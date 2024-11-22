@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Data Analysis{% endblock title %}
+
+{% block body %}
+
+<div class="row" style="margin-top: 0px;">
+  <!-- Navbar on the left -->
+  <nav id="navbar-example3" class="col-md-3 navbar navbar-light bg-light flex-column align-items-stretch p-3 border-right">
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link" href="#data-analysis">Data Analysis</a>
+      <a class="nav-link" href="#univariate-analysis">Univariate Analysis</a>
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link ml-3 my-1" href="#univariate-1">Numerical Data</a>
+        <a class="nav-link ml-3 my-1" href="#univariate-2">Categorical Data</a>
+      </nav>
+      <a class="nav-link" href="#bivariate-analysis">Bivariate Analysis</a>
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link ml-3 my-1" href="#bivariate-1">Bivariate 1</a>
+        <a class="nav-link ml-3 my-1" href="#bivariate-2">Bivariate 2</a>
+        <a class="nav-link ml-3 my-1" href="#bivariate-3">Bivariate 3</a>
+      </nav>
+      <a class="nav-link" href="#multivariate-analysis">Multivariate Analysis</a>
+      <nav class="nav nav-pills flex-column">
+        <a class="nav-link ml-3 my-1" href="#multivariate-1">Multivariate 1</a>
+        <a class="nav-link ml-3 my-1" href="#multivariate-2">Multivariate 2</a>
+        <a class="nav-link ml-3 my-1" href="#multivariate-3">Multivariate 3</a>
+      </nav>
+    </nav>
+  </nav>
+
+  <!-- Scrollable content on the right -->
+  <div
+    class="col-md-9"
+    data-spy="scroll"
+    data-target="#navbar-example3"
+    data-offset="70"
+    style="height: calc(100vh - 70px); overflow-y: auto; padding: 20px; overflow-x: hidden;"
+  >
+    <h4 id="data-analysis">Data Analysis</h4>
+    <p>{% lorem 5 p random %}</p>
+    
+    <h4 id="univariate-analysis">Univariate Analysis </h4><br>
+    <h5 id="univariate-1">Numerical Data</h5> <br>
+    <h6>Age</h6>
+    <img src="/static/age.png" alt="" class="img-fluid">
+    <h6>Income</h6>
+    <img src="/static/income.png" alt="" class="img-fluid">
+    <h6>Employment Experience</h6>
+    <img src="/static/emp_exp.png" alt="" class="img-fluid">
+    <h6>Loan Amount</h6>
+    <img src="/static/amount.png" alt="" class="img-fluid">
+    <h6>Loan Interest Rate</h6>
+    <img src="/static/intrest_rate.png" alt="" class="img-fluid">
+
+    <h6>Loan Percentage of Income</h6>
+    <img src="/static/loan_percentage.png" alt="" class="img-fluid">
+    
+    <h6>Credit History (years)</h6>
+    <img src="/static/credit_hist.png" alt="" class="img-fluid">
+    
+    <h6>Credit Score</h6>
+    <img src="/static/credit_score.png" alt="" class="img-fluid">
+    <h5 id="univariate-2">Categorical Data</h5>
+    <h6>Gender</h6>
+    <img src="/static/gender.png" alt="" class="img-fluid">
+
+    <h6>Education</h6>
+    <img src="/static/education.png" alt="" class="img-fluid">
+
+    <h6>Home Ownership</h6>
+    <img src="/static/ownership.png" alt="" class="img-fluid">
+
+    <h6>Purpose </h6>
+    <img src="/static/intent.png" alt="" class="img-fluid">
+
+    <h6>Previous Loan Default</h6>
+    <img src="/static/default.png" alt="" class="img-fluid">
+
+    <h6>Loan Approval Status</h6>
+    <img src="/static/status.png" alt="" class="img-fluid">
+
+    <br>
+    <br>
+    
+    <h4 id="bivariate-analysis">Bivariate Analysis</h4>
+    <h5 id="bivariate-1">Bivariate 1</h5>
+    <p>{% lorem 5 p random %}</p>
+    <h5 id="bivariate-2">Bivariate 2</h5>
+    <p>{% lorem 5 p random %}</p>
+    <h5 id="bivariate-3">Bivariate 3</h5>
+    <p>{% lorem 5 p random %}</p>
+    
+    <h4 id="multivariate-analysis">Multivariate Analysis</h4>
+    <h5 id="multivariate-1">Multivariate 1</h5>
+    <p>{% lorem 5 p random %}</p>
+    <h5 id="multivariate-2">Multivariate 2</h5>
+    <p>{% lorem 5 p random %}</p>
+    <h5 id="multivariate-3">Multivariate 3</h5>
+    <p>{% lorem 5 p random %}</p>
+  </div>
+</div>
+
+{% endblock body %}
