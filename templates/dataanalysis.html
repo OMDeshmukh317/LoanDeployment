@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Data Analysis{% endblock title %}
 
 {% block body %}
@@ -94,6 +94,7 @@
     <h4 id="multivariate-analysis">Multivariate Analysis</h4>
     <h5 id="multivariate-1">Multivariate 1</h5>
     <p>{% lorem 5 p random %}</p>
+    <img src="{% static 'education.png' %}" alt="Education Image">
     <h5 id="multivariate-2">Multivariate 2</h5>
     <p>{% lorem 5 p random %}</p>
     <h5 id="multivariate-3">Multivariate 3</h5>
