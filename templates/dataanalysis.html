@@ -6,44 +6,43 @@
 
 <div class="row" style="margin-top: 0px;">
   <!-- Navbar on the left -->
-  <nav id="navbar-example3" class="col-md-3 navbar navbar-light bg-light flex-column align-items-stretch p-3 border-right">
+  <nav id="navbar-example3" class="col-md-2 navbar navbar-light bg-light flex-column align-items-stretch p-3 border-right">
     <nav class="nav nav-pills flex-column">
-      <a class="nav-link" href="#data-analysis">Data Analysis</a>
-      <a class="nav-link" href="#univariate-analysis">Univariate Analysis</a>
+      <a class="nav-link" href="#data-analysis"><strong>Data Analysis</strong></a>
+      <a class="nav-link" href="#univariate-analysis"><strong>Univariate Analysis </strong></a>
       <nav class="nav nav-pills flex-column">
         <a class="nav-link ml-3 my-1" href="#univariate-1">Numerical Data</a>
         <a class="nav-link ml-3 my-1" href="#univariate-2">Categorical Data</a>
       </nav>
-      <a class="nav-link" href="#bivariate-analysis">Bivariate Analysis</a>
+      <a class="nav-link" href="#bivariate-analysis"><strong>Bivariate Analysis</strong></a>
       <nav class="nav nav-pills flex-column">
-        <a class="nav-link ml-3 my-1" href="#bivariate-1">Bivariate 1</a>
+        {% comment %} <a class="nav-link ml-3 my-1" href="#bivariate-1">Bivariate 1</a>
         <a class="nav-link ml-3 my-1" href="#bivariate-2">Bivariate 2</a>
-        <a class="nav-link ml-3 my-1" href="#bivariate-3">Bivariate 3</a>
-      </nav>
-      <a class="nav-link" href="#multivariate-analysis">Multivariate Analysis</a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link ml-3 my-1" href="#multivariate-1">Multivariate 1</a>
-        <a class="nav-link ml-3 my-1" href="#multivariate-2">Multivariate 2</a>
-        <a class="nav-link ml-3 my-1" href="#multivariate-3">Multivariate 3</a>
+        <a class="nav-link ml-3 my-1" href="#bivariate-3">Bivariate 3</a> {% endcomment %}
       </nav>
     </nav>
   </nav>
 
   <!-- Scrollable content on the right -->
   <div
-    class="col-md-9"
+    class="col-md-10"
     data-spy="scroll"
     data-target="#navbar-example3"
-    data-offset="70"
+    data-offset="100"
     style="height: calc(100vh - 70px); overflow-y: auto; padding: 20px; overflow-x: hidden;"
   >
     <h4 id="data-analysis">Data Analysis</h4>
-    <p>{% lorem 5 p random %}</p>
-    <img src="{% static 'education.png' %}" alt="EDUCATION" class="img-fluid">
-    <h4 id="univariate-analysis">Univariate Analysis </h4><br>
-    <h5 id="univariate-1">Numerical Data</h5> <br>
+    <p>
+      This Page provides an overview of the data analysis conducted on the Loan dataset. The analysis aims to explore and understand the underlying patterns, relationships, and distributions within the data. 
+      Various visualizations such as histograms, bar charts, pie charts, and violinplots are used to present insights in an intuitive and meaningful way. 
+      The univariate analysis focuses on individual features to identify trends and anomalies, while the bivariate analysis examines relationships between pairs of variables, such as the impact of demographic factors on loan approval status.
+    </p>
+    
+    <br>
+    <h4 id="univariate-analysis">Univariate Analysis </h4>
+    <h5 id="univariate-1">Numerical Data</h5> 
     <h6>Age</h6>
-    <img src="https://lh3.googleusercontent.com/fife/ALs6j_H11d2Zi4Jp3s33VUYvtmP5AADJeJgYJcS21jSxPg25ExrggbK3_m3CrMcnFnowwhmRqPmYY-Fe_UISDa-2jXIVqOkYWslOwpRxByOZ6cZ0LoosOygtELZ5Q9ptZ6bJxQBdZ2UjKZQ-0qthT2PEUn1UgrEbDzP7HqOEY2bXgbMLIld89Ej2agifTnrSbZLitZZqhreA5DWtCmclIDyWrHFoWnHI9tCOFY17oS8qVaSn-9EgypIhKCyvfYkU-mCyla-6rx7Y09QOLn_iywAmPEZPjJisdjjMWETOA0LKQl3ei3QDcLClhV_5n2VDZZ3h63L2aKCHCoQXS-KmfxhZDnnBOWilXtPCkwPbDFQouc5-RB2pTl66brcy5seaPK-XkOfEluneHdkAJfUwiiS6fLkbryHsI9vc_Ikbh2-Apw9uNKesPoj1PH-4VTiNNbgsTokeU9UxxH0lmMHuK-pSfvk6h1rzJPyh49jg3WALdDXJvxJ7hSz90-p6DXRMCppDnc9lejFDRDv0235BTPF2sA3tJt5W7ME2fS9QGn43cZCsL80Jf0fZOViHXlBOB5H-8FKreTkDsyaaWqx6Zv1QypEbAXl7l692Iv50qlW8s_9vDm3BKxQLFhXxLL-TPAh20kMo0NpFB9WV5hHb-gS8mcn9uocScnFYWQjNPgaLG2ZyFdQxsFf_Xv13WsjvfUonS1N_MOVonYCOfoIAz5LVHyBSL74eCwIuBsKJP3CwVPNQ7RGk_dvSwtJGwiiZmpo3p05l4UFq5xFLgaHD-Z2h1XMtAmZyhzeUUZmVwQWQUayzhP0VPbqnC3IHr7phOqWXPlxuJ_ROuYYE-b5W3WcEv4OHxNa16yEk6NmGJhjVNFMk5xO9x7H7KmV9S4MrONd7_w2qeZS7C7q-OWkhMdsP3mPinkEGmTcT7DKPyWyrzXxCdBWN2jr1MfWx7IDFNyXJua2Wva2NQ6jsv75v_96myXBdwNScg6pWstxBwEnGkrISwh5Fq9PvMcpS0fBvUOFis5Ustb1TF9XOCWzGUC2xm9pYcZZadVTUhG0i43022TLJynT4wWNoCAuaPvMX28GdqVSwG_GfBWxJzHE9PrdomY74yoKbvSt3hukGjbySwJ4mQn9cFtBVqz1_qS8kdvnTfV1Oo9cNNzyOiyHeVbFPFGEZKjNlvr3ozVRRRebFk8noaSaLRVPfoa5QQkMdWiLdf6KNvGYvdy4jZuyQ8_uzSnsHoF57bafQiCuGEr9O6ax1yGtkC74Qv0i8u2taGUkm6a5UkoZZDA5gYG5R3vJfe6RnLijE_RUcPGu0tpLyrtMWjcsFbVZCuE8kLP6-1Q6yujWgKK60470H-dRJZLB6BbPnrsifdrJD3f4xtP1Zf7hPP2r9PgfW1IfhMzvACJaf7-ZpE2NeVwm0AwI9bEFU4N-ZN8DEkyQVwG8RldSxF6eQIijY7eUON0kPnBb6vL9t7nL0L1OwkcWvU5eAb3KICgkJ7V8IAHv7CvCSNjjrxKGqLV0MgQXSwDh1OR9dCNBYzdwacQiS4ZwmlO6W1yel7CfH3Bs9HBhr9Yt2vzWixde7qz6SFG1BGIeAVnmyzD9MzNYYnTgQ3zVntraWiFWfD5qJi2Z-D3V6oaZHXg95BkY5b2zpMznDcf112z3uECCaNaXEi71MuMMUJeaJ1E6wPndQ7rMhhdovdPaauyopJHS8Z1y09I1DCYWHr0tvW7w=w1920-h922" alt="" class="img-fluid">
+    <img src="/static/age.png" alt="" class="img-fluid">
     <h6>Income</h6>
     <img src="/static/income.png" alt="" class="img-fluid">
     <h6>Employment Experience</h6>
@@ -52,54 +51,64 @@
     <img src="/static/amount.png" alt="" class="img-fluid">
     <h6>Loan Interest Rate</h6>
     <img src="/static/intrest_rate.png" alt="" class="img-fluid">
-
     <h6>Loan Percentage of Income</h6>
-    <img src="/static/loan_percentage.png" alt="" class="img-fluid">
-    
+    <img src="/static/loan_precentage.png" alt="" class="img-fluid">
     <h6>Credit History (years)</h6>
     <img src="/static/credit_hist.png" alt="" class="img-fluid">
-    
     <h6>Credit Score</h6>
     <img src="/static/credit_score.png" alt="" class="img-fluid">
+
     <h5 id="univariate-2">Categorical Data</h5>
     <h6>Gender</h6>
-    <img src="/static/gender.png" alt="" class="img-fluid">
-
+    <img src="/static/gender1.png" alt="" class="img-fluid"><br>
     <h6>Education</h6>
-    <img src="/static/education.png" alt="" class="img-fluid">
-
+    <img src="/static/education1.png" alt="" class="img-fluid">
     <h6>Home Ownership</h6>
-    <img src="/static/ownership.png" alt="" class="img-fluid">
-
-    <h6>Purpose </h6>
-    <img src="/static/intent.png" alt="" class="img-fluid">
-
+    <img src="/static/ownership1.png" alt="" class="img-fluid">
+    <h6>Purpose</h6>
+    <img src="/static/intent1.png" alt="" class="img-fluid">
     <h6>Previous Loan Default</h6>
-    <img src="/static/default.png" alt="" class="img-fluid">
-
+    <img src="/static/default1.png" alt="" class="img-fluid">
     <h6>Loan Approval Status</h6>
-    <img src="/static/status.png" alt="" class="img-fluid">
+    <img src="/static/loan_status1.png" alt="" class="img-fluid">
 
-    <br>
-    <br>
-    
+    <br><br>
+
     <h4 id="bivariate-analysis">Bivariate Analysis</h4>
-    <h5 id="bivariate-1">Bivariate 1</h5>
-    <p>{% lorem 5 p random %}</p>
-    <h5 id="bivariate-2">Bivariate 2</h5>
-    <p>{% lorem 5 p random %}</p>
-    <h5 id="bivariate-3">Bivariate 3</h5>
-    <p>{% lorem 5 p random %}</p>
+    {% comment %} <h5 id="bivariate-1">Bivariate 1</h5> {% endcomment %}
+    <h6>Distribution of Age by Loan Status</h6>
+    <img src="/static/Distribution of Age by Loan Status.png" alt="" class="img-fluid">
+    <h6>Credit History Length by Loan Status</h6>
+    <img src="/static/Credit History Length by Loan Status.png" alt="" class="img-fluid">
+    <h6>Loan Amount Distribution by Loan Status</h6>
+    <img src="/static/Loan Amount Distribution by Loan Status.png" alt="" class="img-fluid">
+    <h6>Employment Experience by Loan Status</h6>
+    <img src="/static/Employment Experience by Loan Status.png" alt="" class="img-fluid">
+    <h6>Loan Interest Rate by Loan Status</h6>
+    <img src="/static/Loan Interest Rate by Loan Status.png" alt="" class="img-fluid">
+    <h6>Loan Percent Income by Loan Status</h6>
+    <img src="/static/Loan Percent Income by Loan Status.png" alt="" class="img-fluid">
+
+    {% comment %} <h5 id="bivariate-2">Bivariate 2</h5> {% endcomment %}
+    <h6>Gender Distribution</h6>
+    <img src="/static/Approved Loan Status - Gender Distribution pie.png" alt="" class="img-fluid">
+
+    {% comment %} <h5 id="bivariate-3">Bivariate 3</h5> {% endcomment %}
+    <h6>Loan Status by Education Level</h6>
+    <img src="/static/Loan Status by Education Level.png" alt="" class="img-fluid">
+    <h6>Loan Status by Gender</h6>
+    <img src="/static/Loan Status by Gender.png" alt="" class="img-fluid">
+    <h6>Loan Status by Home Ownership</h6>
+    <img src="/static/Loan Status by Home Ownership.png" alt="" class="img-fluid">
+    <h6>Loan Intent by Loan Status</h6>
+    <img src="/static/Loan Intent by Loan Status.png" alt="" class="img-fluid">
+    <h6>Previous Loan Default</h6>
+    <img src="/static/Previous Loan Default.png" alt="" class="img-fluid">
     
-    <h4 id="multivariate-analysis">Multivariate Analysis</h4>
-    <h5 id="multivariate-1">Multivariate 1</h5>
-    <p>{% lorem 5 p random %}</p>
-    <img src="{% static 'education.png' %}" alt="Education Image">
-    <h5 id="multivariate-2">Multivariate 2</h5>
-    <p>{% lorem 5 p random %}</p>
-    <h5 id="multivariate-3">Multivariate 3</h5>
-    <p>{% lorem 5 p random %}</p>
+    <br><br>
   </div>
 </div>
-
+<br>
+<br>
+<br>
 {% endblock body %}
