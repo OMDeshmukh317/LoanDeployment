@@ -1,16 +1,117 @@
 {% extends "base.html" %}
 
-
 {% block title %}About{% endblock title %}
 
-
-
 {% block body %}
+<br>
 <div class="container">
-<div class="one">
-<h1>This is about Page</h1>  
-</div>
-{% lorem 5 p random %}
-</div>
+    <div class="one">
+        
+        <h1>About the Project</h1>
+        <p>
+            This project is a machine learning-based classification system designed to predict loan status 
+            (approved or rejected) based on various borrower characteristics. By analyzing key factors such as 
+            income, credit history, and loan amount, the project provides insights into loan eligibility and 
+            automates the decision-making process for financial institutions. The goal is to develop a robust 
+            and efficient model that handles diverse data types while ensuring high predictive accuracy.
+        </p>
 
+        <h2>Project Objectives</h2>
+        <ol>
+            <li>Explore and preprocess a real-world dataset containing demographic, financial, and credit-related features.</li>
+            <li>Build and evaluate multiple machine learning models for classification.</li>
+            <li>Optimize the best-performing model using advanced hyperparameter tuning techniques.</li>
+            <li>Deploy the final model into a user-friendly web application for easy access and interaction.</li>
+        </ol>
+
+        <h2>Technologies Used</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Technology</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Python</td>
+                    <td>Data preprocessing, feature engineering, and model training.</td>
+                </tr>
+                <tr>
+                    <td>Django</td>
+                    <td>Backend development and deployment.</td>
+                </tr>
+                <tr>
+                    <td>Bootstrap</td>
+                    <td>Responsive and clean front-end design.</td>
+                </tr>
+                <tr>
+                    <td>Render</td>
+                    <td>Cloud deployment for accessibility.</td>
+                </tr>
+                <tr>
+                    <td>Git</td>
+                    <td>Version control and collaborative development.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Dataset Overview</h2>
+        <p>
+            The dataset used for this project consists of 45,000 entries and 14 features, sourced from <strong>Kaggle</strong>. It includes a mix of 
+            numerical and categorical variables, representing diverse borrower characteristics such as:
+        </p>
+        <ul>
+            <li><strong>Demographics:</strong> Age, gender, and education level.</li>
+            <li><strong>Financial Details:</strong> Income, employment experience, and home ownership status.</li>
+            <li><strong>Loan Features:</strong> Loan amount, interest rate, loan intent, and percentage of income dedicated to loans.</li>
+            <li><strong>Credit History:</strong> Credit score, credit history length, and previous loan defaults.</li>
+        </ul>
+        <p>
+            The target variable, <strong>loan_status</strong>, indicates whether the loan was approved (1) or rejected (0).
+        </p>
+
+        <h2>Key Steps in Model Development</h2>
+        <ol>
+            <li><strong>Data Preprocessing:</strong> The dataset was pre-cleaned, eliminating the need for additional handling of missing values.</li>
+            <li><strong>Outlier Detection:</strong> Identified and addressed to enhance model reliability.</li>
+            <li><strong>Data Visualization:</strong> Explored feature distributions and relationships using EDA techniques.</li>
+            <li><strong>Feature Encoding:</strong> Transformed categorical variables using Label Encoding for compatibility.</li>
+            <li><strong>Class Imbalance Handling:</strong> Used SMOTE to address target variable imbalance.</li>
+            <li><strong>Model Training:</strong> Evaluated the following algorithms using cross-validation:
+                <ul>
+                    <li>Logistic Regression</li>
+                    <li>Decision Tree Classifier</li>
+                    <li>Random Forest Classifier</li>
+                    <li>Gaussian Naive Bayes</li>
+                    <li>K-Nearest Neighbors (KNN)</li>
+                    <li>AdaBoost</li>
+                    <li>XGBoost</li>
+                </ul>
+            </li>
+            <li><strong>Hyperparameter Tuning:</strong> Optimized models using GridSearchCV.</li>
+        </ol>
+
+        <h2>Results and Performance</h2>
+        <p>
+            The <strong>XGBoost</strong> model emerged as the best performer, achieving an accuracy of <strong>93%</strong>. This demonstrates 
+            the effectiveness of preprocessing and model selection.
+        </p>
+
+        <h2>Deployment</h2>
+        <p>
+            The final model was deployed using Django, creating a user-friendly web application. The system is hosted on <strong>Render</strong>, 
+            making it accessible for real-world use.
+        </p>
+
+        <h2>Future Enhancements</h2>
+        <p>Potential improvements for the project include:</p>
+        <ul>
+            <li>Incorporating additional features, such as geographical data, to improve prediction accuracy.</li>
+            <li>Developing an API for integration with banking platforms.</li>
+            <li>Optimizing deployment for improved response times and scalability.</li>
+            <li>Adding advanced visualization tools for real-time insights.</li>
+        </ul>
+    </div>
+</div>
 {% endblock body %}
