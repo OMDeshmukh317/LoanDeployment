@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
       html {
         scroll-behavior: smooth; /* Optional, for smooth scrolling */
@@ -17,7 +19,7 @@
       }
       
       [id^="univariate"], [id^="bivariate"], [id^="multivariate"] {
-        scroll-margin-top: 10px; /* Adjust this value to the height of your navbar */
+        scroll-margin-top: 70px; /* Adjust this value to the height of your navbar */
       }
       
      
@@ -34,7 +36,7 @@
   <body>
    <div class="container mt-5">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Loan Prediction</a>
+        <a class="navbar-brand" href="/">Loan Prediction</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,14 +52,74 @@
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
         
           </ul>
           
         </div>
 </nav>
 </div>
+
 {% block body %}
 {% endblock body %}
+
+
+<footer>
+  <div style="background-color: #222; color: #ddd; padding: 30px 0;">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-md-4 text-center text-md-left mb-3 mb-md-0">
+          <h5 style="color: #fff;">About Us</h5>
+          <p style="font-size: 14px;">
+            The Loan Prediction Platform is a machine learning-based solution designed to predict loan approval 
+            status using borrower data such as income, credit history, and loan details. This project integrates 
+            advanced algorithms and intuitive design to assist financial institutions in automating decision-making 
+            and empowering users with data-driven insights.
+          </p>
+        </div>
+        
+        
+        <!-- Quick Links Section -->
+        <div class="col-md-4 text-center text-md-left mb-3 mb-md-0">
+          <h5 style="color: #fff;">Quick Links</h5>
+          <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 1.8;">
+            <li><a href="/" style="color: #17a2b8; text-decoration: none;">Home</a></li>
+            <li><a href="/dataanalysis" style="color: #17a2b8; text-decoration: none;">Data Analysis</a></li>
+            <li><a href="/about" style="color: #17a2b8; text-decoration: none;">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="col-md-4 text-center text-md-left">
+          <h5 style="color: #fff;" id='contact'>Contact Us</h5>
+          <p style="font-size: 14px;">
+            <i class="fas fa-envelope"></i> 
+            <a href="mailto:omdeshmukh.connect@gmail.com" style="color: #17a2b8; text-decoration: none;">omdeshmukh.connect@gmail.com</a>
+          </p>
+          <p style="font-size: 14px;">
+            <i class="fas fa-phone-alt"></i> +91 7671972127
+          </p>
+          <p style="font-size: 14px;">
+            <i class="fab fa-github"></i> 
+            <a href="https://github.com/OMDeshmukh317?tab=repositories" target="_blank" style="color: #17a2b8; text-decoration: none;">GitHub</a>
+          </p>
+          <p style="font-size: 14px;">
+            <i class="fab fa-linkedin"></i> 
+            <a href="https://www.linkedin.com/in/om-deshmukh-connect" target="_blank" style="color: #17a2b8; text-decoration: none;">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center mt-4" style="border-top: 1px solid #444; padding-top: 10px;">
+        <p style="font-size: 14px;">&copy; 2024 Loan Prediction Platform. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
     <!-- Optional JavaScript -->
