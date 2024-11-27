@@ -6,32 +6,29 @@
 <br> 
 <div class="container-fluid my-4 d-flex justify-content-center">
     <div class="p-4 rounded" style="max-width: 600px; width: 100%; border: 2px solid #6c757d; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #c8d7e7;">
-      {% comment %} <form action="result" method="POST"> {% endcomment %}
-
       <form action="{% url 'index' %}" method="POST">
         {% csrf_token %}
-        
 
         {% if result %}
-  {% if result == 'success' %}
-    <div class="alert alert-success" role="alert">
-      Congratulations! Your loan application is approved.
-    </div>
-  {% else %}
-    <div class="alert alert-danger" role="alert">
-      Sorry, your loan application was not approved.
-    </div>
-  {% endif %}
-{% endif %}
+          {% if result == 'success' %}
+            <div class="alert alert-success" role="alert">
+              Congratulations! Your loan application is approved.
+            </div>
+          {% else %}
+            <div class="alert alert-danger" role="alert">
+              Sorry, your loan application was not approved.
+            </div>
+          {% endif %}
+        {% endif %}
 
-        
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
         </div>
+
         <div class="form-group">
           <label for="age">Age (in years)</label>
-          <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+          <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age in years" required>
         </div>    
 
         <fieldset class="form-group">
@@ -59,13 +56,18 @@
         </div>
 
         <div class="form-group">
-          <label for="income">Annual Income</label>
-          <input type="number" class="form-control" id="income" name="income" placeholder="Enter your annual income" required>
+          <label for="income">Annual Income (in Dollars)</label>
+          <div class="input-group">
+            <input type="number" class="form-control" id="income" name="income" placeholder="Enter your annual income" required>
+            <div class="input-group-append">
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="experience">Total Work Experience (in years)</label>
-          <input type="number" class="form-control" id="experience" name="experience" placeholder="Enter your total years of work experience" required>
+          <input type="number" class="form-control" id="experience" name="experience" placeholder="Enter your total work experience in years" required>
         </div>
 
         <div class="form-group">
@@ -80,8 +82,13 @@
         </div>
 
         <div class="form-group">
-          <label for="amount">Loan Amount Requested</label>
-          <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter the loan amount" required>
+          <label for="amount">Loan Amount Requested (in Dollars)</label>
+          <div class="input-group">
+            <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter the loan amount" required>
+            <div class="input-group-append">
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
@@ -99,12 +106,17 @@
 
         <div class="form-group">
           <label for="interest">Loan Interest Rate (in %)</label>
-          <input type="number" class="form-control" id="interest" name="interest" placeholder="Enter the loan interest rate" required>
+          <div class="input-group">
+            <input type="number" class="form-control" id="interest" name="interest" placeholder="Enter the loan interest rate" required>
+            <div class="input-group-append">
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
         </div>
 
         <div class="form-group">
           <label for="credithistory">Credit History Length (in years)</label>
-          <input type="number" class="form-control" id="credithistory" name="credithistory" placeholder="Enter your credit history length" required>
+          <input type="number" class="form-control" id="credithistory" name="credithistory" placeholder="Enter your credit history length in years" required>
         </div>
 
         <div class="form-group">
